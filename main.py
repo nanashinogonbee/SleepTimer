@@ -21,7 +21,7 @@ time_of_day = [{
                    'name': 'day',
                    'starthour': 12,
                    'endhour': 18
-               }, 
+               },
                {
                    'name': 'evening',
                    'starthour': 18,
@@ -41,7 +41,7 @@ for a in time_of_day:
         break
 
 # --- program start ---
-print(f'{"_" * flen}') # divider (----) to maintain readability
+print(f'{"_" * flen}')  # divider (----) to maintain readability
 print(f'{now_msg.center(flen)}')
 print(f'''{"Let's suppose you are going to bed right now.".center(flen)}''')
 print(f'{pst_msg.center(flen)}')
@@ -51,7 +51,7 @@ print(f'{"_" * flen}')
 for x in range(low, hi + 1):
     cycle.append(90 * x + 15)  # 90mins + time to sleep
 
-cc = 0 # current cycle
+cc = 0  # current cycle
 
 for mins in cycle:
     hrs = 0
@@ -74,7 +74,7 @@ for mins in cycle:
     print(f'{hrs} hrs {mins} mins (wake up at {wakeuphr}:{wakeupmin})')
     cc += 1
 
-if currtod == 'day': # add 20-minute break if it's day now
+if currtod == 'day':  # add 20-minute break if it's day now
     wakeuphr = currhour
     wakeupmin = currmin + 20
 
